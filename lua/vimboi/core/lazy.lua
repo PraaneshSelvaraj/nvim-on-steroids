@@ -1,4 +1,5 @@
 -- Why Lazy? Lazy resembles myself
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 -- Check if lazy is missing, which it probably is, because nothing is ever simple
