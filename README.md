@@ -32,7 +32,7 @@ It's modular. It's sarcastic. It's angry. It's written by a caffeine-overdosed h
 
 You’ll need the following, because of course you do:
 
-- Neovim **0.9+** – *don’t even try this with 0.8 unless you hate yourself.*
+- Neovim **0.10+** – *don’t even try this with 0.9 unless you hate yourself.*
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep)
 - [`fd`](https://github.com/sharkdp/fd)
 - `node` – because half the plugins speak JavaScript.
@@ -81,7 +81,7 @@ It's structured. It's modular. It's also held together with duct tape and fragil
 > “Hey, something broke!”  
 Wow, what a surprise. Welcome to the club.
 
-- Check your Neovim version. If it's not `0.9+`, upgrade or face the wrath.
+- Check your Neovim version. If it's not `0.10+`, upgrade or face the wrath.
 - Run `:Lazy` and look for angry red errors.
 - Delete `~/.local/share/nvim`, `~/.cache/nvim`, and `~/.config/nvim/lazy-lock.json`, then try again with more optimism (or alcohol).
 - Still not working? That's the *experience*.
