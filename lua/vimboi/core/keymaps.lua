@@ -1,4 +1,4 @@
--- Vimboi keymaps: because my fingers are fast... *wink* 
+-- Vimboi keymaps: because my fingers are fast... *wink*
 
 local keymap = vim.keymap.set
 
@@ -19,3 +19,10 @@ keymap('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save. Because auto-save isn’t
 
 -- Quick quit. Because rage quit is in my DNA.
 keymap('n', '<leader>qq', '<cmd>qa!<CR>', { desc = 'Panic quit all' })
+
+-- LLMS are god. I like to worship em.
+keymap('v', '<leader>y', '"+y', { desc = 'Copy to system clipboard' })
+
+keymap('n', '<leader>y', '"+yy', { desc = 'Copy line to system clipboard' })
+
+keymap('n', '<leader>P', '"+p', { desc = 'Paste from system clipboard' })
