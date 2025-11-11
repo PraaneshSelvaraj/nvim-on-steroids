@@ -41,6 +41,11 @@ return {
         map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
+        -- Opens your mess in a neat list
+        map('<leader>q', function()
+          vim.diagnostic.setqflist { open = true, severity = vim.diagnostic.severity.ERROR }
+        end, '[Q]uickfix list')
+
         -- Inlay hint toggle. Because who doesn't like a little extra noise in the editor?
         if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
           map('<leader>th', function()

@@ -1,6 +1,18 @@
+vim.opt_local.expandtab = true
+vim.opt_local.tabstop = 2
+vim.opt_local.shiftwidth = 2
+vim.opt_local.softtabstop = 2
+vim.opt_local.smartindent = true
+
+local jdtls_package_path = vim.fn.expand '~/.local/share/nvim/mason/packages/jdtls'
+
+local lombok_jar_path = jdtls_package_path .. '/lombok.jar'
+
 local config = {
   cmd = {
-    vim.fn.expand '~/.local/share/nvim/mason/packages/jdtls/bin/jdtls',
+    jdtls_package_path .. '/bin/jdtls',
+
+    '--jvm-arg=-javaagent:' .. lombok_jar_path,
   },
   -- Surely, this will work on every machine, right? Just pray the paths don't change, or you'll be *thrilled* to debug this mess.
 

@@ -34,6 +34,10 @@ return {
 
     formatters_by_ft = {
       lua = { 'stylua' },
+      java = { 'google-java-format' },
+      python = { 'black' },
+      javascript = { 'prettier' },
+      json = { 'prettier' },
     },
   },
 }

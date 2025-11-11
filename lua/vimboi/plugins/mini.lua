@@ -15,7 +15,7 @@ return { -- Collection of various small independent plugins/modules
 
     ---@diagnostic disable-next-line: duplicate-set-field
     statusline.section_location = function()
-      return '%2l:%-2v' -- Because we're all about being precise. 
+      return '%2l:%-2v' -- Because we're all about being precise.
     end
   end,
 }
