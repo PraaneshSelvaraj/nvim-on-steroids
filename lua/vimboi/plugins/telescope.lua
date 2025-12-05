@@ -19,6 +19,9 @@ return {
   config = function()
     -- Setup Telescope like it's your only chance at productivity
     require('telescope').setup {
+      defaults = {
+        path_display = { 'smart' },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
