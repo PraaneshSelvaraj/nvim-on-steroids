@@ -1,18 +1,25 @@
 return {
-  -- Let's face it, your code doesn’t work anyway, so at least let’s make it colorful. 
+  -- Let's face it, your code doesn't work anyway, so at least let's make it colorful.
   -- Nothing screams "I care about this project" like some pretty syntax highlighting, right?
   'nvim-treesitter/nvim-treesitter',
 
-  build = ':TSUpdate',
+  branch = 'master', -- Stable branch - no tree-sitter CLI required
 
   main = 'nvim-treesitter.configs',
 
   opts = {
+    -- Essential parsers that are pre-installed
     ensure_installed = {
-      'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'java', 'scala' 
+      'lua',
+      'vim',
+      'vimdoc',
+      'bash',
+      'python',
+      'java',
     },
-    -- We auto-install missing languages. Because, honestly, who has the time to install stuff themselves?
-    auto_install = true,
+
+    -- Auto-install is disabled because we have a custom autocmd that does it per-filetype
+    auto_install = false,
 
     highlight = {
       enable = true,
